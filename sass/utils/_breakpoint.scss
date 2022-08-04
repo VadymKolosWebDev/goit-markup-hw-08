@@ -1,0 +1,21 @@
+// 480px
+    @mixin for-phone-up {
+        @media screen and (min-width: 480px) {
+            @content;
+        }
+    }
+
+// 768px
+    @mixin for-tablet-up {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+
+// 1200px
+    @mixin for-desktop-up {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }

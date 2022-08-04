@@ -1,5 +1,13 @@
+	@import '../utils/breakpoint';
+
 .action {
-	padding-bottom: 94px;
+	display: none;
+
+
+	@include for-desktop-up {
+		display: block;
+		padding-bottom: 94px;
+	}
 
 	&__title {
 		margin-bottom: 50px;
