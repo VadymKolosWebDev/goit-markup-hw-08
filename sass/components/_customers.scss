@@ -10,8 +10,15 @@
 }
 
 .customer__list {
+	@include for-tablet-up{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	@include for-desktop-up {
 	display: flex;
 	justify-content: space-between;
+	}
 }
 
 .customer__link {

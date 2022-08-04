@@ -1,10 +1,17 @@
 	@import '../utils/breakpoint';
 
 .achiev__list {
+	@include for-tablet-up{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 30px;
+	}
 
-
+	@include for-desktop-up {
 	display: flex;
 	justify-content: space-between;
+	}
 }
 
 .achiev__item {
