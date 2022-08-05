@@ -49,22 +49,31 @@
 
 	@include for-desktop-up {
 	display: flex;
-	
 	}
 }
 
 .filter__card-item {
 	margin-left: 30px;
 
-	width: 370px;
 
-	flex-basis: calc(100% / 3 - 30рх);
 	background: $bg-color-cards;
 	border: 1px solid $border-color-cards;
 	@include trans (box-shadow);
 
 	&:not(:nth-last-child(-n + 3)) {
 		margin-bottom: 30px;
+	}
+
+	@include for-tablet-up {
+		width: 354px;
+
+		flex-basis: calc(100% / 2 - 30рх);
+	}
+
+	@include for-desktop-up {
+		width: 370px;
+
+		flex-basis: calc(100% / 3 - 30рх);
 	}
 
 	&:hover {
@@ -90,11 +99,19 @@
 
 
 .overlay {
+
+
+	@include for-tablet-up {
+		width: 354px;
+	}
+	@include for-desktop-up {
+		height: 370px;
+	}
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 370px;
+	
 	transform: translatey(100%);
 	@include trans (transform);
 }
