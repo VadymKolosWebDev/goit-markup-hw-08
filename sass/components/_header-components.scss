@@ -1,6 +1,7 @@
 @import '../utils/breakpoint';
 
 .header {
+	width: 100%;
 
 	@include for-phone-up {
 		display: none;
@@ -102,6 +103,12 @@
 
 .address--top {
 
+	@include for-tablet-up {
+		display: flex;
+		align-items: center;
+		
+	}
+
 	@include for-desktop-up {
 		margin-left: auto;
 	}
@@ -109,18 +116,33 @@
 
 .address__list--top {
 
+	@include for-tablet-up {
+		display: flex;
+		flex-direction: column;
+		align-items: space-around;
+		
+	}
+
 	@include for-desktop-up {
 		display: flex;
+		flex-direction: row;
 	}
 	
 }
 
 .address__item--top {
 	display: flex;
+	
+	@include for-tablet-up {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
 
 	@include for-desktop-up {
 		&:not(:last-child) {
 			margin-right: 30px;
+			margin-bottom: 0;
 		}
 	}
 

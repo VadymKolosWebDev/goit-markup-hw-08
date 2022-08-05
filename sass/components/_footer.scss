@@ -1,16 +1,47 @@
+@import '../utils/breakpoint';
+
+
 .footer {
 	padding: 60px 0;
 	background: $bg-color-footer;
+
+	&__wrapper {
+
+		@include for-tablet-up {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@include for-desktop-up {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		
+	}
+
+		&__logo {
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
 }
 
-.footer__wrapper {
-	display: flex;
-	justify-content: space-between;
+
+
+.wrapper-tab {
+
+	@include for-tablet-up {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	@include for-desktop-up {
+		display: flex;
+	}
 }
 
-.footer__logo {
-	margin-bottom: 20px;
-}
+
 
 
 .address__item--bottom:not(:last-child) {
@@ -38,10 +69,29 @@
 	color: $links-color-map;
 }
 
+.footer-column {
+	&:not(:first-child) {
+		@include for-tablet-up {
+			margin-right: 70px;
+		}
+}
 
 .column-second {
-	margin-top: 12px;
+
+	&:not(:first-child) {
+		@include for-tablet-up {
+			display: block;
+		}
+	}
+
+	@include for-desktop-up {
+		margin-top: 12px;
+		align-self: start;
+	}
+	
 }
+
+
 
 .footer__title {
 	margin-bottom: 20px;
@@ -137,10 +187,4 @@
 	&:focus {
 		background-color: $accent-color-button;
 	}
-}
-
-.footer__icon-send {
-	width: 24px;
-	height: 24px;
-	margin-left: 10px;
 }

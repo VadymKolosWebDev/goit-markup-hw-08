@@ -1,13 +1,28 @@
+@import '../utils/breakpoint';
+
 .hero {
-	margin: auto;
+	margin: 0 auto;
 	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 		url(../images/img-index/img-hero.jpg);
-	max-width: 1600px;
+			max-width: 1600px;
 
 	background-size: cover;
 	background-position: center;
-	padding-top: 200px;
-	padding-bottom: 200px;
+
+	@include for-phone-up {
+		padding-top: 118px;
+		padding-bottom: 118px;
+	}
+
+	@include for-tablet-up {
+		padding-top: 118px;
+		padding-bottom: 118px;
+	}
+
+	@include for-desktop-up {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
 }
 
 .hero__title {

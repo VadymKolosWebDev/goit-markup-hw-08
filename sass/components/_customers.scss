@@ -6,13 +6,22 @@
 	line-height: 1.17;
 	text-align: center;
 	letter-spacing: 0.03em;
-	margin-bottom: 50px;
+
+	@include for-tablet-up {
+		margin-bottom: 30px;
+	}
+
+	@include for-desktop-up {
+		margin-bottom: 50px;
+	}
 }
 
 .customer__list {
 	@include for-tablet-up{
 		display: flex;
+		justify-content: center;
 		flex-wrap: wrap;
+		gap: 30px;
 	}
 
 	@include for-desktop-up {
