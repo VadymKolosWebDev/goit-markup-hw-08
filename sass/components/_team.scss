@@ -2,7 +2,6 @@
 
 .team {
 	background: $bg-color-secondary;
-	width: 100%;
 }
 
 .team__title {
@@ -43,11 +42,27 @@
 
 
 .unit__image {
-	width: 270px;
+	
+
+	@include for-tablet-up {
+		max-width: 354px;
+	}
+
+	@include for-desktop-up {
+		width: 270px;
+	}
 }
 
 .unit__text {
-	padding: 30px 32px;
+
+
+	@include for-tablet-up {
+		padding: 30px 74px;
+	}
+
+	@include for-desktop-up {
+		padding: 30px 32px;
+	}
 }
 
 .unit__title {
@@ -71,8 +86,6 @@
 
 
 .team__list-icon {
-	padding: 0;
-	margin: 0;
 	display: flex;
 	justify-content: space-between;
 	padding-top: 16px;

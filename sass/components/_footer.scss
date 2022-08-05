@@ -1,47 +1,42 @@
 @import '../utils/breakpoint';
 
-
 .footer {
 	padding: 60px 0;
 	background: $bg-color-footer;
-
-	&__wrapper {
-
-		@include for-tablet-up {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		@include for-desktop-up {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-		}
-		
-	}
-
-		&__logo {
-		margin-bottom: 20px;
-		margin-right: 0;
-	}
 }
 
-
-
-.wrapper-tab {
+.footer__wrapper {
 
 	@include for-tablet-up {
 		display: flex;
-		justify-content: space-around;
+		flex-direction: column;
+		justify-content: center;
 	}
-
 	@include for-desktop-up {
 		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+}
+
+.wrapper-tab {
+	@include for-tablet-up {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 60px;
+	}
+	@include for-desktop-up {
+		display: flex;
+		justify-content: flex-start;
 	}
 }
 
+.footer__logo {
+	margin-bottom: 20px;
 
+	
+}
 
 
 .address__item--bottom:not(:last-child) {
@@ -69,29 +64,20 @@
 	color: $links-color-map;
 }
 
-.footer-column {
-	&:not(:first-child) {
-		@include for-tablet-up {
-			margin-right: 70px;
-		}
+.footer-column:first-child {
+	@include for-desktop-up {
+		margin-right: 70px;
+	}
 }
 
 .column-second {
-
-	&:not(:first-child) {
-		@include for-tablet-up {
-			display: block;
-		}
-	}
-
-	@include for-desktop-up {
-		margin-top: 12px;
-		align-self: start;
-	}
-	
+	margin-top: 12px;
 }
 
-
+.column-third {
+	display: flex;
+	flex-direction: column;
+}
 
 .footer__title {
 	margin-bottom: 20px;
@@ -104,6 +90,15 @@
 	letter-spacing: 0.03em;
 
 	color: $text-color-light;
+
+
+	// @include for-phone-up {}
+	@include for-tablet-up {
+		text-align: center;
+	}
+	@include for-desktop-up {
+		text-align: start;
+	}
 }
 
 .link-social {
@@ -143,13 +138,39 @@
 
 
 .footer__form {
-	display: flex;
-	flex-wrap: wrap;
+
+	@include for-desktop-up {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	@include for-desktop-up {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 }
 
+
+
 .footer__email {
+
+
+	@include for-tablet-up {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 450px;
+	}
+	@include for-desktop-up {
+		display: inline-block;
+		margin-right: 10px;
+		width: 358px;
+	}
+
 	outline: none;
-	width: 358px;
+	
 	margin-right: 12px;
 	padding: 15px 16px;
 	border-radius: 4px;
@@ -168,6 +189,15 @@
 
 
 .footer__btn {
+
+
+	@include for-tablet-up {
+		margin: 20px auto 0;
+		
+	}
+	@include for-desktop-up {
+		margin: 0;
+	}
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -187,4 +217,10 @@
 	&:focus {
 		background-color: $accent-color-button;
 	}
+}
+
+.footer__icon-send {
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
 }

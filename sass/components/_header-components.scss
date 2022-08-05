@@ -1,13 +1,19 @@
 @import '../utils/breakpoint';
 
 .header {
-	width: 100%;
 
 	@include for-phone-up {
 		display: none;
 	}
 
 	@include for-tablet-up {
+		display: block;
+		background: var(--bg-color-header);
+		background-position: center;
+		border-bottom: 1px solid var(--border-top-header);
+	}
+
+	@include for-desktop-up {
 		display: block;
 		background: var(--bg-color-header);
 		background-position: center;

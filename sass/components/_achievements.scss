@@ -15,7 +15,14 @@
 }
 
 .achiev__item {
-	width: 270px;
+	
+	@include for-tablet-up {
+		width: 354px;
+	}
+
+	@include for-desktop-up {
+		width: 270px;
+	}
 }
 
 .achiev__space {
