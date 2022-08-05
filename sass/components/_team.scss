@@ -45,6 +45,10 @@
 	
 
 	@include for-tablet-up {
+		max-width: 450px;
+	}
+
+	@include for-tablet-up {
 		max-width: 354px;
 	}
 
