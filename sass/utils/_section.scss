@@ -1,9 +1,9 @@
 @import '../utils/breakpoint';
 
 .section {
-	@include for-tablet-up {
-		padding: 60px 0;
-	}
+
+	padding: 60px 0;
+
 	
 	@include for-desktop-up {
 		padding: 94px 0;
