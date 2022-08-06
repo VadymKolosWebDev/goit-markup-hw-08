@@ -448,6 +448,28 @@ main {
   fill: #2196f3;
 }
 
+.header--mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+  min-width: 480px;
+  padding: 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .header--mobile {
+    display: none;
+  }
+}
+
+.icon-menu {
+  width: 40px;
+  height: 40px;
+}
+
 .hero {
   margin: 0 auto;
   min-width: 480px;
