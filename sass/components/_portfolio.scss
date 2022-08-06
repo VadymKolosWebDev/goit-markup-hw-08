@@ -58,20 +58,26 @@
 	border: 1px solid $border-color-cards;
 	@include trans (box-shadow);
 
-	&:not(:nth-last-child(-n + 3)) {
-		margin-bottom: 30px;
-	}
+	
 
 	@include for-tablet-up {
 		width: 354px;
 
 		flex-basis: calc(100% / 2 - 30рх);
+		
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
 	}
 
 	@include for-desktop-up {
 		width: 370px;
 
 		flex-basis: calc(100% / 3 - 30рх);
+
+		&:not(:nth-last-child(-n + 3)) {
+		margin-bottom: 30px;
+	}
 	}
 
 	&:hover {
@@ -90,8 +96,14 @@
 	position: relative;
 	overflow: hidden;
 	padding: 0;
-	width: 370px;
-	height: 294px;
+
+
+	@include for-tablet-up {
+		width: 354px;
+	}
+	@include for-desktop-up {
+		width: 370px;
+	}
 }
 
 
@@ -103,7 +115,7 @@
 		width: 354px;
 	}
 	@include for-desktop-up {
-		height: 370px;
+		width: 370px;
 	}
 	position: absolute;
 	top: 0;
@@ -127,8 +139,12 @@
 }
 
 .card__img {
-	width: 370px;
-	height: 294px;
+	@include for-tablet-up {
+		width: 354px;
+	}
+	@include for-desktop-up {
+		width: 370px;
+	}
 }
 
 .card__text {
@@ -136,7 +152,7 @@
 }
 
 .card__title {
-	margin: 0;
+
 
 	font-weight: 700;
 	font-size: 18px;

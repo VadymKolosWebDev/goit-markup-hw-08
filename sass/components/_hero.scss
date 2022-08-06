@@ -1,25 +1,41 @@
+$hero-gradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+
+
 .hero {
 	margin: 0 auto;
-	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-		url(../images/img-index/img-hero.jpg);
-			max-width: 1600px;
 
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 
-	@include for-phone-up {
 		padding-top: 118px;
 		padding-bottom: 118px;
-	}
+
+		background-image: $hero-gradient, url(../images/img-index/img-hero-phone-tablet.jpg);
+		@media (min-device-pixel-ratio: 2),
+			(min-resolution: 2dppx),
+			(min-resolution: 2dpi) {
+			background-image: $hero-gradient, url(../images/img-index/img-hero-phone-tablet@2x.jpg);
+		}
+
 
 	@include for-tablet-up {
-		padding-top: 118px;
-		padding-bottom: 118px;
+		max-width: 768px;
+		
 	}
 
 	@include for-desktop-up {
+		max-width: 1600px;
 		padding-top: 200px;
 		padding-bottom: 200px;
+
+
+		background-image: $hero-gradient, url(../images/img-index/img-hero-desktop.jpg);
+		@media (min-device-pixel-ratio: 2),
+			(min-resolution: 2dppx),
+			(min-resolution: 2dpi) {
+			background-image: $hero-gradient, url(../images/img-index/img-hero-desktop@2x.jpg);
+		}
 	}
 }
 

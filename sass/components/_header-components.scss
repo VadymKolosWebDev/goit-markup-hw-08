@@ -1,8 +1,7 @@
 .header {
 
-	@include for-phone-up {
-		display: none;
-	}
+	display: none;
+
 
 	@include for-tablet-up {
 		display: block;
