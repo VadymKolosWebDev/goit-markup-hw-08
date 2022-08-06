@@ -1,4 +1,6 @@
 .achiev__list {
+
+
 	@include for-tablet-up{
 		display: flex;
 		flex-wrap: wrap;
@@ -14,6 +16,8 @@
 
 .achiev__item {
 	
+	
+
 	@include for-tablet-up {
 		width: 354px;
 	}

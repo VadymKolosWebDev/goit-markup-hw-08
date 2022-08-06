@@ -1,18 +1,18 @@
 .container {
-	@include for-phone-up {
-		max-width: 480px;
+
+		width: 480px;
 		padding: 0 15px;
 		margin: 0 auto;
-	}
+
 
 	@include for-tablet-up {
-		max-width: 768px;
+		width: 768px;
 		padding: 0 15px;
 		margin: 0 auto;
 	}
 
 	@include for-desktop-up {
-		max-width: 1200px;
+		width: 1200px;
 		padding: 0 15px;
 		margin: 0 auto;
 	}

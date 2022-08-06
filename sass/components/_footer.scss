@@ -1,4 +1,5 @@
 .footer {
+	background-position: center;
 	padding: 60px 0;
 	background: $bg-color-footer;
 }
@@ -19,10 +20,13 @@
 }
 
 .wrapper-tab {
+		margin-bottom: 60px;
+
+
 	@include for-tablet-up {
 		display: flex;
 		justify-content: space-around;
-		margin-bottom: 60px;
+
 	}
 	@include for-desktop-up {
 		display: flex;
@@ -31,10 +35,9 @@
 	}
 }
 
+
 .footer__logo {
 	margin-bottom: 20px;
-
-	
 }
 
 
@@ -92,9 +95,9 @@
 
 
 	// @include for-phone-up {}
-	@include for-tablet-up {
+
 		text-align: center;
-	}
+
 	@include for-desktop-up {
 		text-align: start;
 	}
@@ -138,7 +141,7 @@
 
 .footer__form {
 
-	@include for-desktop-up {
+	@include for-tablet-up {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
