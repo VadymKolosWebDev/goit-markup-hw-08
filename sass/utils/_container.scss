@@ -1,5 +1,3 @@
-@import '../utils/breakpoint';
-
 .container {
 	@include for-phone-up {
 		max-width: 480px;

@@ -1,5 +1,3 @@
-	@import '../utils/breakpoint';
-
 .achiev__list {
 	@include for-tablet-up{
 		display: flex;
