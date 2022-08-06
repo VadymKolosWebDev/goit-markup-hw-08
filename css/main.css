@@ -657,6 +657,7 @@ main {
 
 .team {
   background: #f5f4fa;
+  min-width: 480px;
 }
 
 .team__title {
