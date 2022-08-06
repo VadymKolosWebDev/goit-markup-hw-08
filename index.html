@@ -58,19 +58,77 @@
 
     <header class="header--mobile">
         <a href="./index.html" class="logo logo-mobile">Web<span class="logo-top">Studio</span></a></span></a>
-        <button class="mobile-button">
+        <button class="mobile-button" data-menu-open>
             <svg class="icon-menu">
                 <use href="./images/svg/icons.svg#icon-menu"></use>
             </svg>
         </button>
     </header>
 
-    <div class="mobile-menu">
-        <!-- <button class="modal__btn--close" data-menu-close>
-            <svg class="modal__icon--close">
+    <div class="mobile-menu is-hidden-menu" data-menu>
+        <button class="menu__btn--close" data-menu-close>
+            <svg class="menu__icon--close">
                 <use href="./images/svg/icons.svg#icon-close"></use>
             </svg>
-        </button> -->
+        </button>
+
+        <nav class="mobile__nav">
+            <ul class="mobile__nav-list">
+                <li class="mobile__nav-item">
+                    <a href="./index.html" class="mobile__nav-link mobile--current">
+                        Студия
+                    </a>
+                </li>
+                <li class="mobile__nav-item">
+                    <a href="./portfolio.html" class="mobile__nav-link">
+                        Портфолио
+                    </a>
+                </li>
+                <li class="mobile__nav-item">
+                    <a href="#" class="mobile__nav-link">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <address class="mobile__contacts">
+            <ul class="mobile__contact-list">
+                <li class="mobile__contact-item">
+                    <a href="tel:+380961111111" class="mobile__contact-tel">
+                        +38 096 111 11 11
+                    </a>
+                </li>
+                <li class="mobile__contact-item">
+                    <a href="mailto:info@devstudio.com" class="mobile__contact-email">
+                        info@devstudio.com
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="mobile__social-list">
+                <li class="mobile__social-item">
+                    <a href="#" class="mobile__social-link">
+                        Instagram
+                    </a>
+                </li>
+                <li class="mobile__social-item">
+                    <a href="#" class="mobile__social-link">
+                        Twitter
+                    </a>
+                </li>
+                <li class="mobile__social-item">
+                    <a href="#" class="mobile__social-link">
+                        Facebook
+                    </a>
+                </li>
+                <li class="mobile__social-item">
+                    <a href="#" class="mobile__social-link">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </address>
     </div>
 
     <!-- Main content -->
@@ -581,6 +639,9 @@
     </div>
 
     <!-- Modal script -->
+    <script src="./js/menu.js" type="text/javascript"></script>
+
+
     <script src="./js/modal.js" type="text/javascript"></script>
 </body>
 </html>
