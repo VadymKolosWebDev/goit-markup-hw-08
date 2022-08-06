@@ -1,11 +1,21 @@
 .filter__list {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 50px;
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin-bottom: 30px;
+	
+	@include for-tablet-up {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 50px;
+	}
 }
 
 .filter__item:not(:last-child) {
-	margin-right: 8px;
+	@include for-tablet-up {
+		margin-right: 8px;
+	}
+	
 }
 
 .filter__btn {
@@ -38,12 +48,9 @@
 
 
 .cards {
-
-	@include for-tablet-up{
 		display: flex;
 		flex-wrap: wrap;
 		margin-left: -30px;
-	}
 
 	@include for-desktop-up {
 	display: flex;
@@ -58,16 +65,18 @@
 	border: 1px solid $border-color-cards;
 	@include trans (box-shadow);
 
-	
+	width: 450px;
 
+	&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	
 	@include for-tablet-up {
 		width: 354px;
 
 		flex-basis: calc(100% / 2 - 30рх);
 		
-		&:not(:last-child) {
-			margin-bottom: 30px;
-		}
+		
 	}
 
 	@include for-desktop-up {
@@ -97,26 +106,22 @@
 	overflow: hidden;
 	padding: 0;
 
+	width: 450px;
+	height: 294px;
 
 	@include for-tablet-up {
 		width: 354px;
+		height: 294px;
 	}
 	@include for-desktop-up {
 		width: 370px;
+		height: 294px;
 	}
 }
 
 
 
 .overlay {
-
-
-	@include for-tablet-up {
-		width: 354px;
-	}
-	@include for-desktop-up {
-		width: 370px;
-	}
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -124,6 +129,15 @@
 	
 	transform: translatey(100%);
 	@include trans (transform);
+	width: 450px;
+	height: 294px;
+
+	@include for-tablet-up {
+		width: 354px;
+	}
+	@include for-desktop-up {
+		width: 370px;
+	}
 }
 
 .overlay-content {
@@ -134,16 +148,25 @@
 	letter-spacing: 0.03em;
 	background-color: $bg-color-slider;
 	color: $text-color-light;
-	padding: 63px 24px;
 	margin: 0;
+
+		padding: 63px 24px;
+
+height: 294px;
+
 }
 
 .card__img {
+	width: 450px;
+	height: 294px;
+
 	@include for-tablet-up {
 		width: 354px;
+		height: 294px;
 	}
 	@include for-desktop-up {
 		width: 370px;
+		height: 294px;
 	}
 }
 

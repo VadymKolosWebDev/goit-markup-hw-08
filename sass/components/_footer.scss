@@ -36,8 +36,22 @@
 	}
 }
 
+.address__list--bottom {
+
+	@media (max-width: 767px) {
+		margin-bottom: 60px;
+	}
+	
+	@media (max-width: 1199px) {
+		text-align: center;
+		
+	}
+
+
+}
 
 .footer__logo {
+	justify-content: center;
 	margin-bottom: 20px;
 }
 
@@ -70,7 +84,7 @@
 .footer-column {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+
 
 	@include for-desktop-up {
 		display: inline-block;
@@ -84,9 +98,10 @@
 }
 
 .column-second {
-	margin-top: 12px;
+
 
 	@include for-desktop-up {
+		margin-top: 12px;
 		margin: 0;
 	}
 }
