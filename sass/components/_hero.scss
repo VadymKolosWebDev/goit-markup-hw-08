@@ -3,8 +3,8 @@ $hero-gradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58
 
 .hero {
 	margin: 0 auto;
-	max-width: 767px;
-	width: 100%;
+	min-width: 480px;
+
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -12,16 +12,16 @@ $hero-gradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58
 		padding-top: 118px;
 		padding-bottom: 118px;
 
+		max-width: 768px;
 		background-image: $hero-gradient, url(../images/img-index/img-hero-mob.jpg);
-		
 		@media (min-device-pixel-ratio: 2),
 		(min-resolution: 2dppx),
 		(min-resolution: 2dpi) {
 		background-image: $hero-gradient, url(../images/img-index/img-hero-mob@2x.jpg);
+	}
 
 
 	@include for-tablet-up {
-
 		max-width: 1199px;
 		background-image: $hero-gradient, url(../images/img-index/img-hero-tablet.jpg);
 		@media (min-device-pixel-ratio: 2),

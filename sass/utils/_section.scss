@@ -3,6 +3,7 @@
 .section {
 
 	padding: 60px 0;
+	min-width: 480px
 
 	
 	@include for-desktop-up {
