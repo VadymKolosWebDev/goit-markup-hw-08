@@ -4,6 +4,7 @@
 	height: 60px;
 	min-width: 480px;
 	padding: 0 15px;
+    border: 1px solid #c6c6c6;
 
 	@include for-tablet-up {
 		display: none;

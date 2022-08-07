@@ -1,20 +1,20 @@
 .header {
 
 	display: none;
-	border: 1px solid #ECECEC;
+	border: 1px solid #c6c6c6;
 
 	@include for-tablet-up {
 		display: block;
 		background: var(--bg-color-header);
 		background-position: center;
-		border: 1px solid #ECECEC;
+		border: 1px solid #c6c6c6;
 	}
 
 	@include for-desktop-up {
 		display: block;
 		background: var(--bg-color-header);
 		background-position: center;
-		border: 1px solid #ECECEC;
+		border: 1px solid #c6c6c6;
 	}
 
 	&__links {
