@@ -186,7 +186,7 @@ video {
 }
 
 .container {
-  max-width: 480px;
+  width: 480px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -236,7 +236,6 @@ body {
 main {
   background-color: #ffffff;
   background-position: center;
-  min-width: 480px;
 }
 
 .header {
