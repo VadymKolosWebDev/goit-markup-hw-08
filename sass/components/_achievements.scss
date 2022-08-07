@@ -1,11 +1,9 @@
 .achiev__list {
 
-
 	@include for-tablet-up{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 30px;
 	}
 
 	@include for-desktop-up {
@@ -16,13 +14,34 @@
 
 .achiev__item {
 	
-	
+	width: 100%;
+
+	&:not(:last-child){
+		margin-bottom: 30px;
+	}
+	@include for-phone-up {
+		width: 450px;
+	}
 
 	@include for-tablet-up {
+		&:not(:nth-last-child(n-2)){
+			margin-bottom: 30px;
+		}
+
+		:nth-child(n-2){
+			margin-right: 30px;
+		}
 		width: 354px;
 	}
 
 	@include for-desktop-up {
+		&:not(:nth-last-child(n-2)){
+			margin-bottom: 0px;
+		}
+
+		:nth-child(n-2){
+			margin-right: 0px;
+		}
 		width: 270px;
 	}
 }
@@ -49,6 +68,12 @@
 	font-size: 14px;
 	line-height: 1.14;
 	text-transform: uppercase;
+
+	text-align: center;
+
+	@include for-tablet-up {
+		text-align: left;
+	}
 }
 
 .achiev__description {

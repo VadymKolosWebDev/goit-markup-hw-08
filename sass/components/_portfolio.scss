@@ -1,19 +1,24 @@
 .filter__list {
 	display: inline-flex;
 	flex-wrap: wrap;
-	gap: 15px;
 	margin-bottom: 30px;
-	
+
+
 	@include for-tablet-up {
 		display: flex;
 		justify-content: center;
 		margin-bottom: 50px;
+		
 	}
 }
 
 .filter__item:not(:last-child) {
-	@include for-tablet-up {
 		margin-right: 8px;
+		&:not(:nth-last-child(-n+2)){
+			padding-bottom: 15px;
+		}
+	@include for-tablet-up {
+		margin-bottom: 0;
 	}
 	
 }
@@ -60,17 +65,19 @@
 .filter__card-item {
 	margin-left: 30px;
 
-
+	width: 100%;
 	background: $bg-color-cards;
 	border: 1px solid $border-color-cards;
 	@include trans (box-shadow);
+
+	@include for-phone-up {
 
 	width: 450px;
 
 	&:not(:last-child) {
 			margin-bottom: 30px;
 		}
-	
+	}
 	@include for-tablet-up {
 		width: 354px;
 
@@ -106,9 +113,12 @@
 	overflow: hidden;
 	padding: 0;
 
+width: 100%;
+
+	@include for-phone-up {
 	width: 450px;
 	height: 294px;
-
+	}
 	@include for-tablet-up {
 		width: 354px;
 		height: 294px;

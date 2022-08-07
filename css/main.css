@@ -240,13 +240,14 @@ main {
 
 .header {
   display: none;
+  border: 1px solid #ECECEC;
 }
 @media screen and (min-width: 768px) {
   .header {
     display: block;
     background: var(--bg-color-header);
     background-position: center;
-    border-bottom: 1px solid var(--border-top-header);
+    border: 1px solid #ECECEC;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -254,7 +255,7 @@ main {
     display: block;
     background: var(--bg-color-header);
     background-position: center;
-    border-bottom: 1px solid var(--border-top-header);
+    border: 1px solid #ECECEC;
   }
 }
 @media screen and (min-width: 768px) {
@@ -472,7 +473,7 @@ main {
 .icon-menu {
   width: 40px;
   height: 40px;
-  fill: #AFB1B8;
+  fill: #212121;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -731,7 +732,6 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -745,14 +745,37 @@ main {
   }
 }
 
+.achiev__item {
+  width: 100%;
+}
+.achiev__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 480px) {
+  .achiev__item {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 768px) {
   .achiev__item {
     width: 354px;
+  }
+  .achiev__item:not(:nth-last-child(n-2)) {
+    margin-bottom: 30px;
+  }
+  .achiev__item :nth-child(n-2) {
+    margin-right: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
   .achiev__item {
     width: 270px;
+  }
+  .achiev__item:not(:nth-last-child(n-2)) {
+    margin-bottom: 0px;
+  }
+  .achiev__item :nth-child(n-2) {
+    margin-right: 0px;
   }
 }
 
@@ -783,6 +806,12 @@ main {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .achiev__title {
+    text-align: left;
+  }
 }
 
 .achiev__description {
@@ -846,8 +875,9 @@ main {
 
 .team__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
+  /* identical to box height */
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
@@ -855,6 +885,11 @@ main {
 @media screen and (min-width: 1200px) {
   .team__title {
     margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -984,8 +1019,9 @@ main {
 
 .customer__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
+  /* identical to box height */
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
@@ -993,6 +1029,11 @@ main {
 @media screen and (min-width: 1200px) {
   .customer__title {
     margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -1070,7 +1111,6 @@ main {
   display: inline-flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 15px;
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
@@ -1085,9 +1125,15 @@ main {
   }
 }
 
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+.filter__item:not(:last-child):not(:nth-last-child(-n+2)) {
+  padding-bottom: 15px;
+}
 @media screen and (min-width: 768px) {
   .filter__item:not(:last-child) {
-    margin-right: 8px;
+    margin-bottom: 0;
   }
 }
 
@@ -1132,16 +1178,21 @@ main {
 
 .filter__card-item {
   margin-left: 30px;
+  width: 100%;
   background: #ffffff;
   border: 1px solid #eeeeee;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 450px;
 }
-.filter__card-item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (min-width: 480px) {
+  .filter__card-item {
+    width: 450px;
+  }
+  .filter__card-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .filter__card-item {
@@ -1175,8 +1226,13 @@ main {
   position: relative;
   overflow: hidden;
   padding: 0;
-  width: 450px;
-  height: 294px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .card__box {
+    width: 450px;
+    height: 294px;
+  }
 }
 @media screen and (min-width: 768px) {
   .card__box {
@@ -1594,9 +1650,19 @@ main {
   border-radius: 4px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 450px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .modal__box {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
+  .modal__box {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .modal__box {
     width: 528px;
   }

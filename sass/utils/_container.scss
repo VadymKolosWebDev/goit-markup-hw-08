@@ -1,8 +1,10 @@
 .container {
 
+
 		width: 480px;
 		padding: 0 15px;
 		margin: 0 auto;
+		
 
 	@include for-tablet-up {
 		width: 768px;

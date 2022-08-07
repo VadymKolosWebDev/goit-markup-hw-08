@@ -25,9 +25,17 @@
 
 	transform: translate(-50%, -50%);
 
-	width: 450px;
+	width: 100%;
+
+	@include for-phone-up {
+		width: 450px;
+	}
 
 	@include for-tablet-up {
+		width: 450px;
+	}
+
+	@include for-desktop-up {
 		width: 528px;
 	}
 	
