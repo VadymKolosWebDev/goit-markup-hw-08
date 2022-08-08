@@ -1,6 +1,11 @@
 .team {
 	background: $bg-color-secondary;
-	min-width: 480px;
+
+	width: 100%;
+	@include for-phone-up {
+		min-width: 480px;
+	}
+	
 }
 
 .team__title {
@@ -70,8 +75,11 @@
 
 .unit__text {
 
-	padding: 30px 122px;
+	padding: 30px 0;
 
+	@include for-phone-up {
+		padding: 30px 122px;
+	}
 
 	@include for-tablet-up {
 		padding: 30px 74px;
@@ -103,9 +111,16 @@
 
 
 .team__list-icon {
-	display: flex;
-	justify-content: space-between;
-	padding-top: 16px;
+		padding-top: 16px;
+		display: flex;
+		justify-content:center;
+
+	@include for-phone-up {
+
+		justify-content: space-between;
+
+	}
+	
 }
 
 .team__item-icon {
