@@ -248,10 +248,12 @@
 	@include trans (background-color);
 	
 		margin: 20px auto 0;
-	
+		max-width: 100%;
+	@include for-phone-up {
+		width: 200px;
+	}
 	@include for-desktop-up {
 		margin: 0;
-		
 	}
 
 	
