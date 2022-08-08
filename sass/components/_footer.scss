@@ -1,8 +1,12 @@
 .footer {
-	min-width: 480px;
+	width: 100%;
 	background-position: center;
 	padding: 60px 0;
 	background: $bg-color-footer;
+
+	@include for-phone-up {
+		min-width: 480px;
+	}
 }
 
 .footer__wrapper {

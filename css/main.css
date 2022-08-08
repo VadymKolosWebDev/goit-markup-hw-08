@@ -186,9 +186,16 @@ video {
 }
 
 .container {
-  width: 480px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -457,9 +464,14 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 60px;
-  min-width: 480px;
+  width: 100%;
   padding: 0 15px;
   border: 1px solid #c6c6c6;
+}
+@media screen and (min-width: 480px) {
+  .header--mobile {
+    min-width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .header--mobile {
@@ -1334,10 +1346,15 @@ main {
 }
 
 .footer {
-  min-width: 480px;
+  width: 100%;
   background-position: center;
   padding: 60px 0;
   background: #2f303a;
+}
+@media screen and (min-width: 480px) {
+  .footer {
+    min-width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
